@@ -12,6 +12,8 @@ Utility library for CAL code Aramaic transliteration
 
 ## Installation
 
+In order to use this library, [Node.js](https://nodejs.org) should be installed. 
+Then run:
 ```
 npm install cal-code-util --save
 ```
@@ -21,6 +23,9 @@ Following packages are available:
 * `cal-code-util.min.js` - minified version of `cal-code-util.js`
 * `cal-code-util.esm.js` - ES6 module version, suitable for bundling with other 
 libraries and applications
+
+The package could also be downloaded directly from:
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.1.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.1.tgz)
 
 ## More information
 
@@ -38,7 +43,7 @@ libraries and applications
 
 The final goal for this work is to learn the Word of God as recorded by
 [Peshitta](https://en.wikipedia.org/wiki/Peshitta).
-You are welcomed to to improve this implementation or provide feeback. Please
+You are welcomed to to improve this implementation or provide feedback. Please
 feel free to [Fork](https://help.github.com/articles/fork-a-repo/), create a
 [Pull Request](https://help.github.com/articles/about-pull-requests/) or
 submit [Issues](https://github.com/peshitta/cal-code-util/issues).
@@ -58,10 +63,10 @@ npm run build
 * [cal](#module_cal)
     * [.consonants](#module_cal.consonants) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacretics](#module_cal.diacretics) : <code>Array.&lt;string&gt;</code>
+    * [.diacritics](#module_cal.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_cal.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_cal.isVowel) ⇒ <code>boolean</code>
-    * [.isDiacretic](#module_cal.isDiacretic) ⇒ <code>boolean</code>
+    * [.isDiacritic](#module_cal.isDiacritic) ⇒ <code>boolean</code>
 
 <a name="module_cal.consonants"></a>
 
@@ -75,10 +80,10 @@ CAL consonants
 CAL vowels
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.diacretics"></a>
+<a name="module_cal.diacritics"></a>
 
-### cal.diacretics : <code>Array.&lt;string&gt;</code>
-Sedra/CAL diacretic characters:
+### cal.diacritics : <code>Array.&lt;string&gt;</code>
+Sedra/CAL diacritic characters:
 1. __'__ dot above, Qushaya
 2. __,__ dot below, Rukkakha
 3. **_** line under
@@ -109,13 +114,13 @@ Is character c a CAL vowel
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_cal.isDiacretic"></a>
+<a name="module_cal.isDiacritic"></a>
 
-### cal.isDiacretic ⇒ <code>boolean</code>
-Is character c a diacretic? Same characters used for both Sedra 3 and CAL.
+### cal.isDiacritic ⇒ <code>boolean</code>
+Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
-**Returns**: <code>boolean</code> - true if c is a diacretic  
+**Returns**: <code>boolean</code> - true if c is a diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
