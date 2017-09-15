@@ -25,7 +25,7 @@ Following packages are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.1.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.1.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.2.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.2.tgz)
 
 ## More information
 
@@ -62,6 +62,8 @@ npm run build
 
 * [cal](#module_cal)
     * [.consonants](#module_cal.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.commonVowels](#module_cal.commonVowels) : <code>Array.&lt;string&gt;</code>
+    * [.easternVowels](#module_cal.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
     * [.diacritics](#module_cal.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_cal.isConsonant) ⇒ <code>boolean</code>
@@ -74,10 +76,22 @@ npm run build
 CAL consonants
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.commonVowels"></a>
+
+### cal.commonVowels : <code>Array.&lt;string&gt;</code>
+CAL common vowels
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.easternVowels"></a>
+
+### cal.easternVowels : <code>Array.&lt;string&gt;</code>
+CAL eastern only vowels
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.vowels"></a>
 
 ### cal.vowels : <code>Array.&lt;string&gt;</code>
-CAL vowels
+CAL eastern vowels
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.diacritics"></a>

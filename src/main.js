@@ -5,24 +5,35 @@
  * @type { string[] }
 */
 export const consonants = Object.freeze([
+  // abgad
   ')',
   'b',
   'g',
   'd',
+
+  // hawaz
   'h',
   'w',
   'z',
+
+  // ḥaṭy
   'x',
   'T',
   'y',
+
+  // kalman
   'k',
   'l',
   'm',
   'n',
+
+  // saʿpac
   's',
   '(',
   'p',
   'c',
+
+  // qarshat
   'q',
   'r',
   '$',
@@ -30,11 +41,25 @@ export const consonants = Object.freeze([
 ]);
 
 /**
- * CAL vowels
+ * CAL common vowels
  * @constant
  * @type { string[] }
 */
-export const vowels = Object.freeze(['a', 'o', 'e', 'i', 'u', 'E', 'O']);
+export const commonVowels = Object.freeze(['a', 'o', 'e', 'i', 'u']);
+
+/**
+ * CAL eastern only vowels
+ * @constant
+ * @type { string[] }
+*/
+export const easternVowels = Object.freeze(['E', 'O']);
+
+/**
+ * CAL eastern vowels
+ * @constant
+ * @type { string[] }
+*/
+export const vowels = Object.freeze(commonVowels.concat(easternVowels));
 
 /**
  * Sedra/CAL diacritic characters:
