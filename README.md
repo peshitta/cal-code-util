@@ -18,14 +18,14 @@ Then run:
 npm install cal-code-util --save
 ```
 
-Following packages are available:
+Following bundles are available:
 * `cal-code-util.js` - UMD ES5 version for use in browser, node, etc.
 * `cal-code-util.min.js` - minified version of `cal-code-util.js`
 * `cal-code-util.esm.js` - ES6 module version, suitable for bundling with other 
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.2.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.2.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.3.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.3.tgz)
 
 ## More information
 

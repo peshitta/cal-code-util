@@ -1,6 +1,6 @@
 {
   "name": "cal-code-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility library for CAL code Aramaic transliteration",
   "main": "build/cal-code-util.js",
   "main݂Min": "build/cal-code-util.min.js",
@@ -38,6 +38,10 @@
     "url": "git+https://github.com/peshitta/cal-code-util.git"
   },
   "keywords": [
+    "CAL",
+    "CAL code",
+    "Estrangela",
+    "Estrangelo",
     "Peshitta",
     "Peshitto",
     "Pshitta",
@@ -46,10 +50,7 @@
     "Sedra.js",
     "Sedrajs",
     "Aramaic",
-    "Syriac",
-    "CAL",
-    "Estrangela",
-    "Estrangelo"
+    "Syriac"
   ],
   "author": "Greg Borota",
   "license": "MIT",
