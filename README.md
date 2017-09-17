@@ -63,7 +63,7 @@ npm run build
 * [cal](#module_cal)
     * [.consonants](#module_cal.consonants) : <code>Array.&lt;string&gt;</code>
     * [.extraConsonants](#module_cal.extraConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.allConsonants](#module_cal.allConsonants)
+    * [.allConsonants](#module_cal.allConsonants) : <code>Array.&lt;string&gt;</code>
     * [.commonVowels](#module_cal.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternVowels](#module_cal.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
@@ -86,7 +86,7 @@ Extra CAL consonants specific to Palestinian or Hebrew
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.allConsonants"></a>
 
-### cal.allConsonants
+### cal.allConsonants : <code>Array.&lt;string&gt;</code>
 Base consonants + extra consonants
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  

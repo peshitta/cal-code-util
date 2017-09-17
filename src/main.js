@@ -52,6 +52,8 @@ export const extraConsonants = [
 
 /**
  * Base consonants + extra consonants
+ * @constant
+ * @type { string[] }
  */
 export const allConsonants = consonants.concat(extraConsonants);
 
