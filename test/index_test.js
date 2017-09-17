@@ -9,6 +9,8 @@ describe('CAL', () => {
       test.ok(sut.isConsonant(')'), ') isConsonant');
       test.ok(sut.isConsonant('('), '( isConsonant');
       test.ok(sut.isConsonant('g'), 'g isConsonant');
+      test.ok(sut.isConsonant('P'), 'P isConsonant');
+      test.ok(sut.isConsonant('&'), '& isConsonant');
       test.ok(!sut.isConsonant('B'), 'B isConsonant');
       test.ok(!sut.isConsonant('G'), 'G isConsonant');
       test.ok(!sut.isConsonant('u'), 'u isConsonant');

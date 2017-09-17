@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.3.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.3.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.4.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.4.tgz)
 
 ## More information
 
@@ -62,6 +62,8 @@ npm run build
 
 * [cal](#module_cal)
     * [.consonants](#module_cal.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.extraConsonants](#module_cal.extraConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.allConsonants](#module_cal.allConsonants)
     * [.commonVowels](#module_cal.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternVowels](#module_cal.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
@@ -76,6 +78,18 @@ npm run build
 CAL consonants
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.extraConsonants"></a>
+
+### cal.extraConsonants : <code>Array.&lt;string&gt;</code>
+Extra CAL consonants specific to Palestinian or Hebrew
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.allConsonants"></a>
+
+### cal.allConsonants
+Base consonants + extra consonants
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.commonVowels"></a>
 
 ### cal.commonVowels : <code>Array.&lt;string&gt;</code>
@@ -85,13 +99,13 @@ CAL common vowels
 <a name="module_cal.easternVowels"></a>
 
 ### cal.easternVowels : <code>Array.&lt;string&gt;</code>
-CAL eastern only vowels
+CAL eastern/hebrew only vowels
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.vowels"></a>
 
 ### cal.vowels : <code>Array.&lt;string&gt;</code>
-CAL eastern vowels
+CAL vowels including Eastern/Hebrew ones
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.diacritics"></a>

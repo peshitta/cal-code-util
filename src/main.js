@@ -41,6 +41,21 @@ export const consonants = Object.freeze([
 ]);
 
 /**
+ * Extra CAL consonants specific to Palestinian or Hebrew
+ * @constant
+ * @type { string[] }
+ */
+export const extraConsonants = [
+  'P', // Palestinian Syriac P
+  '&' // Hebrew Shin
+];
+
+/**
+ * Base consonants + extra consonants
+ */
+export const allConsonants = consonants.concat(extraConsonants);
+
+/**
  * CAL common vowels
  * @constant
  * @type { string[] }
@@ -48,14 +63,14 @@ export const consonants = Object.freeze([
 export const commonVowels = Object.freeze(['a', 'o', 'e', 'i', 'u']);
 
 /**
- * CAL eastern only vowels
+ * CAL eastern/hebrew only vowels
  * @constant
  * @type { string[] }
 */
 export const easternVowels = Object.freeze(['E', 'O']);
 
 /**
- * CAL eastern vowels
+ * CAL vowels including Eastern/Hebrew ones
  * @constant
  * @type { string[] }
 */
@@ -77,7 +92,7 @@ export const diacritics = Object.freeze(["'", ',', '_', '*']);
  * @param { string } c input character
  * @returns { boolean } true if c is CAL consonant
  */
-export const isConsonant = c => consonants.indexOf(c) > -1;
+export const isConsonant = c => allConsonants.indexOf(c) > -1;
 
 /**
  * Is character c a CAL vowel
