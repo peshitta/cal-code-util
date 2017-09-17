@@ -47,7 +47,7 @@ export const consonants = Object.freeze([
  */
 export const extraConsonants = [
   'P', // Palestinian Syriac P
-  '&' // Hebrew Shin
+  '&' // Hebrew Sin
 ];
 
 /**

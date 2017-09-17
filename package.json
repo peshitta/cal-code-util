@@ -1,6 +1,6 @@
 {
   "name": "cal-code-util",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Utility library for CAL code Aramaic transliteration",
   "main": "build/cal-code-util.js",
   "main݂Min": "build/cal-code-util.min.js",
