@@ -55,7 +55,7 @@ export const extraConsonants = [
  * @constant
  * @type { string[] }
  */
-export const allConsonants = consonants.concat(extraConsonants);
+export const allConsonants = Object.freeze(consonants.concat(extraConsonants));
 
 /**
  * CAL common vowels
