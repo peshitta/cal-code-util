@@ -90,6 +90,13 @@ export const vowels = Object.freeze(commonVowels.concat(easternVowels));
 export const diacritics = Object.freeze(["'", ',', '_', '*']);
 
 /**
+ * Vowels and diacritics: used for consonantal only mapping
+ * @constant
+ * @type { Array.<string> }
+ */
+export const dotting = Object.freeze(vowels.concat(diacritics));
+
+/**
  * Is character c a CAL consonant
  * @param { string } c input character
  * @returns { boolean } true if c is CAL consonant
@@ -109,3 +116,33 @@ export const isVowel = c => vowels.indexOf(c) > -1;
  * @returns { boolean } true if c is a diacritic
  */
 export const isDiacritic = c => diacritics.indexOf(c) > -1;
+
+/**
+ * Returns true if c is dotting character
+ * @param { string } c input character
+ * @returns { boolean } true if c is dotting
+ */
+export const isDotting = c => dotting.indexOf(c) > -1;
+
+/**
+ * Remove dotting (vowels and diacritics), leaving consonantal word only.
+ * @param { string } word input word to be processed
+ * @returns { string } consonantal word
+ */
+export const removeDotting = word => {
+  if (!word) {
+    return word;
+  }
+
+  let hasDotting = false;
+  const stack = [];
+  for (let i = 0, len = word.length; i < len; i++) {
+    const c = word.charAt(i);
+    if (isDotting(c)) {
+      hasDotting = true;
+    } else {
+      stack.push(c);
+    }
+  }
+  return hasDotting ? stack.join('') : word;
+};

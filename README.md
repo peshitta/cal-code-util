@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.5.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.5.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.6.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.6.tgz)
 
 ## More information
 
@@ -68,9 +68,12 @@ npm run build
     * [.easternVowels](#module_cal.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
     * [.diacritics](#module_cal.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.dotting](#module_cal.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_cal.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_cal.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_cal.isDiacritic) ⇒ <code>boolean</code>
+    * [.isDotting](#module_cal.isDotting) ⇒ <code>boolean</code>
+    * [.removeDotting](#module_cal.removeDotting) ⇒ <code>string</code>
 
 <a name="module_cal.consonants"></a>
 
@@ -118,6 +121,12 @@ Sedra/CAL diacritic characters:
 4. __*__ Seyame
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.dotting"></a>
+
+### cal.dotting : <code>Array.&lt;string&gt;</code>
+Vowels and diacritics: used for consonantal only mapping
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.isConsonant"></a>
 
 ### cal.isConsonant ⇒ <code>boolean</code>
@@ -153,4 +162,28 @@ Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
+
+<a name="module_cal.isDotting"></a>
+
+### cal.isDotting ⇒ <code>boolean</code>
+Returns true if c is dotting character
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Returns**: <code>boolean</code> - true if c is dotting  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
+
+<a name="module_cal.removeDotting"></a>
+
+### cal.removeDotting ⇒ <code>string</code>
+Remove dotting (vowels and diacritics), leaving consonantal word only.
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Returns**: <code>string</code> - consonantal word  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input word to be processed |
 

@@ -41,3 +41,93 @@ describe('Diacritics', () => {
     test.ok(!sut.isDiacritic(' '), "' ' isDiacritic");
   });
 });
+describe('CAL', () => {
+  const { removeDotting } = sut;
+
+  describe('removeDotting', () => {
+    it('General case usage, with one-to-one mapping', () => {
+      const word = removeDotting('lmtb(');
+      const vocalised = removeDotting("lmet,b'a(");
+      const wordExpected = 'lmtb(';
+      test.strictEqual(word, wordExpected, 'removeDotting_generic consonant');
+      test.strictEqual(
+        vocalised,
+        wordExpected,
+        'removeDotting_generic vocalised'
+      );
+    });
+    it('General case usage, un-mapped symbols', () => {
+      const word = removeDotting('<l)dnh>');
+      const vocalised = removeDotting('<le)d,neh>');
+      const wordExpected = '<l)dnh>';
+      test.strictEqual(
+        word,
+        wordExpected,
+        'removeDotting consonant with unmapped'
+      );
+      test.strictEqual(
+        vocalised,
+        wordExpected,
+        'removeDotting vocalised with unmapped'
+      );
+    });
+    it('Another one-to-one mapping', () => {
+      const word = removeDotting(')bhwhy');
+      const vocalised = removeDotting(')ab,ohawh_y');
+      const wordExpected = ')bhwhy';
+      test.strictEqual(word, wordExpected, 'removeDotting_wu consonant');
+      test.strictEqual(vocalised, wordExpected, 'removeDotting_wu vocalised');
+    });
+    it('Word with (i;) => (yi) mapping', () => {
+      const word = removeDotting('dylydwth');
+      const vocalised = removeDotting("d'yilyid,wut,eh");
+      const wordExpected = 'dylydwth';
+      test.strictEqual(word, wordExpected, 'removeDotting_yi consonant');
+      test.strictEqual(vocalised, wordExpected, 'removeDotting_yi vocalised');
+    });
+    it('Word with (uO) => (wu) mapping', () => {
+      const word = removeDotting('lb(ldbbykwn');
+      const vocalised = removeDotting("lab,(eld'b,ob,ayk'wun");
+      const wordExpected = 'lb(ldbbykwn';
+      test.strictEqual(word, wordExpected, 'removeDotting_wu consonant');
+      test.strictEqual(vocalised, wordExpected, 'removeDotting_wu vocalised');
+    });
+    it('Word with (oO) => (wO) mapping', () => {
+      const word = removeDotting('btslwnyq)');
+      const vocalised = removeDotting("b't,esalwOniyqi)");
+      const wordExpected = 'btslwnyq)';
+      test.strictEqual(word, wordExpected, 'removeDotting_wO consonant');
+      test.strictEqual(vocalised, wordExpected, 'removeDotting_wO vocalised');
+    });
+    it('Blank word returns blank', () => {
+      const word = removeDotting('');
+      const wordExpected = '';
+      test.strictEqual(word, wordExpected, 'removeDotting_blank');
+    });
+    it('Null word returns null', () => {
+      const word = removeDotting(null);
+      const wordExpected = null;
+      test.strictEqual(word, wordExpected, 'removeDotting_null');
+    });
+    it('Undefined word returns undefined', () => {
+      const word = removeDotting(undefined);
+      const wordExpected = undefined;
+      test.strictEqual(word, wordExpected, 'removeDotting_undefined');
+    });
+    it('0 number as word returns 0', () => {
+      const word = removeDotting(0);
+      const wordExpected = 0;
+      test.strictEqual(word, wordExpected, 'removeDotting_zero');
+    });
+  });
+});
+describe('removeDotting', () => {
+  const { removeDotting } = sut;
+  it('Check consonantal and vocalised', () => {
+    const word = 'dqsry)-dpylypws';
+    const expected = removeDotting('dqsry)-dpylypws');
+    const vocalised = removeDotting("d'qesariya)-d,p,yilyip'wOs");
+    test.strictEqual(word, expected, 'removeDotting consonant only');
+    test.strictEqual(vocalised, expected, 'removeDotting vocalised');
+  });
+});
