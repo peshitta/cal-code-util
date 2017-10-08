@@ -1,4 +1,4 @@
-/** @module cal */
+/** @module calCodeUtil */
 /**
  * CAL consonants
  * @constant

@@ -8,7 +8,7 @@
 [![devDependencies Status](https://david-dm.org/peshitta/cal-code-util/dev-status.svg)](https://david-dm.org/peshitta/cal-code-util?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/peshitta/cal-code-util/badge.svg?branch=master)](https://coveralls.io/github/peshitta/cal-code-util?branch=master)
 
-Utility library for CAL code Aramaic transliteration
+Aramaic CAL code transliteration utilities
 
 ## Installation
 
@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.6.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.6.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.7.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.7.tgz)
 
 ## More information
 
@@ -60,127 +60,127 @@ npm run build
 
 ## API Reference
 
-* [cal](#module_cal)
-    * [.consonants](#module_cal.consonants) : <code>Array.&lt;string&gt;</code>
-    * [.extraConsonants](#module_cal.extraConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.allConsonants](#module_cal.allConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.commonVowels](#module_cal.commonVowels) : <code>Array.&lt;string&gt;</code>
-    * [.easternVowels](#module_cal.easternVowels) : <code>Array.&lt;string&gt;</code>
-    * [.vowels](#module_cal.vowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacritics](#module_cal.diacritics) : <code>Array.&lt;string&gt;</code>
-    * [.dotting](#module_cal.dotting) : <code>Array.&lt;string&gt;</code>
-    * [.isConsonant](#module_cal.isConsonant) ⇒ <code>boolean</code>
-    * [.isVowel](#module_cal.isVowel) ⇒ <code>boolean</code>
-    * [.isDiacritic](#module_cal.isDiacritic) ⇒ <code>boolean</code>
-    * [.isDotting](#module_cal.isDotting) ⇒ <code>boolean</code>
-    * [.removeDotting](#module_cal.removeDotting) ⇒ <code>string</code>
+* [calCodeUtil](#module_calCodeUtil)
+    * [.consonants](#module_calCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.extraConsonants](#module_calCodeUtil.extraConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.allConsonants](#module_calCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.commonVowels](#module_calCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
+    * [.easternVowels](#module_calCodeUtil.easternVowels) : <code>Array.&lt;string&gt;</code>
+    * [.vowels](#module_calCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacritics](#module_calCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.dotting](#module_calCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
+    * [.isConsonant](#module_calCodeUtil.isConsonant) ⇒ <code>boolean</code>
+    * [.isVowel](#module_calCodeUtil.isVowel) ⇒ <code>boolean</code>
+    * [.isDiacritic](#module_calCodeUtil.isDiacritic) ⇒ <code>boolean</code>
+    * [.isDotting](#module_calCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
 
-<a name="module_cal.consonants"></a>
+<a name="module_calCodeUtil.consonants"></a>
 
-### cal.consonants : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
 CAL consonants
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.extraConsonants"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.extraConsonants"></a>
 
-### cal.extraConsonants : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.extraConsonants : <code>Array.&lt;string&gt;</code>
 Extra CAL consonants specific to Palestinian or Hebrew
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.allConsonants"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.allConsonants"></a>
 
-### cal.allConsonants : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.allConsonants : <code>Array.&lt;string&gt;</code>
 Base consonants + extra consonants
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.commonVowels"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.commonVowels"></a>
 
-### cal.commonVowels : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.commonVowels : <code>Array.&lt;string&gt;</code>
 CAL common vowels
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.easternVowels"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.easternVowels"></a>
 
-### cal.easternVowels : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.easternVowels : <code>Array.&lt;string&gt;</code>
 CAL eastern/hebrew only vowels
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.vowels"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.vowels"></a>
 
-### cal.vowels : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.vowels : <code>Array.&lt;string&gt;</code>
 CAL vowels including Eastern/Hebrew ones
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.diacritics"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.diacritics"></a>
 
-### cal.diacritics : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.diacritics : <code>Array.&lt;string&gt;</code>
 Sedra/CAL diacritic characters:
 1. __'__ dot above, Qushaya
 2. __,__ dot below, Rukkakha
 3. **_** line under
 4. __*__ Seyame
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.dotting"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.dotting"></a>
 
-### cal.dotting : <code>Array.&lt;string&gt;</code>
+### calCodeUtil.dotting : <code>Array.&lt;string&gt;</code>
 Vowels and diacritics: used for consonantal only mapping
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.isConsonant"></a>
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.isConsonant"></a>
 
-### cal.isConsonant ⇒ <code>boolean</code>
+### calCodeUtil.isConsonant ⇒ <code>boolean</code>
 Is character c a CAL consonant
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is CAL consonant  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_cal.isVowel"></a>
+<a name="module_calCodeUtil.isVowel"></a>
 
-### cal.isVowel ⇒ <code>boolean</code>
+### calCodeUtil.isVowel ⇒ <code>boolean</code>
 Is character c a CAL vowel
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is CAL vowel  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_cal.isDiacritic"></a>
+<a name="module_calCodeUtil.isDiacritic"></a>
 
-### cal.isDiacritic ⇒ <code>boolean</code>
+### calCodeUtil.isDiacritic ⇒ <code>boolean</code>
 Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_cal.isDotting"></a>
+<a name="module_calCodeUtil.isDotting"></a>
 
-### cal.isDotting ⇒ <code>boolean</code>
+### calCodeUtil.isDotting ⇒ <code>boolean</code>
 Returns true if c is dotting character
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is dotting  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_cal.removeDotting"></a>
+<a name="module_calCodeUtil.removeDotting"></a>
 
-### cal.removeDotting ⇒ <code>string</code>
+### calCodeUtil.removeDotting ⇒ <code>string</code>
 Remove dotting (vowels and diacritics), leaving consonantal word only.
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>string</code> - consonantal word  
 
 | Param | Type | Description |

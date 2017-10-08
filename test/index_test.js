@@ -1,5 +1,5 @@
-import * as test from 'assert';
-import * as sut from '../build/cal-code-util';
+const test = require('assert');
+const sut = require('../build/cal-code-util');
 
 describe('CAL', () => {
   describe('Util', () => {
