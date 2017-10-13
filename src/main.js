@@ -79,6 +79,24 @@ export const easternVowels = Object.freeze(['E', 'O']);
 export const vowels = Object.freeze(commonVowels.concat(easternVowels));
 
 /**
+ * Sedra/CAL diacritic name map
+ * 1. qushaya: __'__ - dot above
+ * 2. rukkakha: __,__ - dot below
+ * 3. lineaOccultans: **_** - linea occultans
+ * 4. seyame: __*__ - seyame, rebwe
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const diacriticsByName = Object.freeze(
+  Object.create(null, {
+    qushaya: { value: "'", enumerable: true },
+    rukkakha: { value: ',', enumerable: true },
+    lineaOccultans: { value: '_', enumerable: true },
+    seyame: { value: '*', enumerable: true }
+  })
+);
+
+/**
  * Sedra/CAL diacritic characters:
  * 1. __'__ dot above, Qushaya
  * 2. __,__ dot below, Rukkakha

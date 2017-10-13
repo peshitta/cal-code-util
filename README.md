@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.7.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.7.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.8.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.8.tgz)
 
 ## More information
 
@@ -67,6 +67,7 @@ npm run build
     * [.commonVowels](#module_calCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternVowels](#module_calCodeUtil.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_calCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacriticsByName](#module_calCodeUtil.diacriticsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.diacritics](#module_calCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.dotting](#module_calCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_calCodeUtil.isConsonant) ⇒ <code>boolean</code>
@@ -109,6 +110,16 @@ CAL eastern/hebrew only vowels
 
 ### calCodeUtil.vowels : <code>Array.&lt;string&gt;</code>
 CAL vowels including Eastern/Hebrew ones
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.diacriticsByName"></a>
+
+### calCodeUtil.diacriticsByName : <code>Object.&lt;string, string&gt;</code>
+Sedra/CAL diacritic name map
+1. qushaya: __'__ - dot above
+2. rukkakha: __,__ - dot below
+3. lineaOccultans: **_** - linea occultans
+4. seyame: __*__ - seyame, rebwe
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.diacritics"></a>
