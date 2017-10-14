@@ -74,7 +74,7 @@ npm run build
     * [.isVowel](#module_calCodeUtil.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_calCodeUtil.isDiacritic) ⇒ <code>boolean</code>
     * [.isDotting](#module_calCodeUtil.isDotting) ⇒ <code>boolean</code>
-    * [.isDotted](#module_calCodeUtil.isDotted) ⇒
+    * [.isDotted](#module_calCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
 
 <a name="module_calCodeUtil.consonants"></a>
@@ -189,11 +189,11 @@ Returns true if c is dotting character
 
 <a name="module_calCodeUtil.isDotted"></a>
 
-### calCodeUtil.isDotted ⇒
+### calCodeUtil.isDotted ⇒ <code>boolean</code>
 Return true if input word has vowels or diacritics
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
-**Returns**: true if word has vowels or diacritics  
+**Returns**: <code>boolean</code> - true if word has vowels or diacritics  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -145,7 +145,7 @@ export const isDotting = c => dotting.indexOf(c) > -1;
 /**
  * Return true if input word has vowels or diacritics
  * @param { string } word input CAL code word
- * @returns true if word has vowels or diacritics
+ * @returns { boolean } true if word has vowels or diacritics
  */
 export const isDotted = word => {
   if (!word) {
