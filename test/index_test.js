@@ -131,3 +131,14 @@ describe('removeDotting', () => {
     test.strictEqual(vocalised, expected, 'removeDotting vocalised');
   });
 });
+describe('isDotted', () => {
+  const { isDotted } = sut;
+  it('Consonantal and vocalised isDotted', () => {
+    const empty = isDotted('');
+    const consonant = isDotted('dqsry)-dpylypws');
+    const vocalised = isDotted("d'qesariya)-d,p,yilyip'wOs");
+    test.strictEqual(empty, false, 'isDotted empty');
+    test.strictEqual(consonant, false, 'isDotted consonant only');
+    test.strictEqual(vocalised, true, 'isDotted vocalised');
+  });
+});

@@ -143,6 +143,24 @@ export const isDiacritic = c => diacritics.indexOf(c) > -1;
 export const isDotting = c => dotting.indexOf(c) > -1;
 
 /**
+ * Return true if input word has vowels or diacritics
+ * @param { string } word input CAL code word
+ * @returns true if word has vowels or diacritics
+ */
+export const isDotted = word => {
+  if (!word) {
+    return false;
+  }
+  for (let i = 0, len = word.length; i < len; i++) {
+    const c = word.charAt(i);
+    if (isDotting(c)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
  * Remove dotting (vowels and diacritics), leaving consonantal word only.
  * @param { string } word input word to be processed
  * @returns { string } consonantal word
