@@ -186,10 +186,10 @@ Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
 <a name="module_calCodeUtil.isPunctuation"></a>
 
 ### calCodeUtil.isPunctuation ⇒ <code>boolean</code>
-Is character c a common punctuation char? Same characters used for both Sedra 3 and CAL.
+Is character c a common punctuation char?
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
-**Returns**: <code>boolean</code> - true if c is a diacritic  
+**Returns**: <code>boolean</code> - true if c is common punctuation  
 
 | Param | Type | Description |
 | --- | --- | --- |

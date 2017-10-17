@@ -143,9 +143,9 @@ export const isVowel = c => vowels.indexOf(c) > -1;
 export const isDiacritic = c => diacritics.indexOf(c) > -1;
 
 /**
- * Is character c a common punctuation char? Same characters used for both Sedra 3 and CAL.
+ * Is character c a common punctuation char?
  * @param { string } c input character
- * @returns { boolean } true if c is a diacritic
+ * @returns { boolean } true if c is common punctuation
  */
 export const isPunctuation = c => punctuation.indexOf(c) > -1;
 
