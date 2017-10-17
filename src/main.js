@@ -108,6 +108,13 @@ export const diacriticsByName = Object.freeze(
 export const diacritics = Object.freeze(["'", ',', '_', '*']);
 
 /**
+ * Common punctuation
+ * @constant
+ * @type { Array.<string> }
+ */
+export const punctuation = Object.freeze([';', '?', '!', '.', '-', ':']);
+
+/**
  * Vowels and diacritics: used for consonantal only mapping
  * @constant
  * @type { Array.<string> }
@@ -134,6 +141,13 @@ export const isVowel = c => vowels.indexOf(c) > -1;
  * @returns { boolean } true if c is a diacritic
  */
 export const isDiacritic = c => diacritics.indexOf(c) > -1;
+
+/**
+ * Is character c a common punctuation char? Same characters used for both Sedra 3 and CAL.
+ * @param { string } c input character
+ * @returns { boolean } true if c is a diacritic
+ */
+export const isPunctuation = c => punctuation.indexOf(c) > -1;
 
 /**
  * Returns true if c is dotting character

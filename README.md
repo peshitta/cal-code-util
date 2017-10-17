@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.9.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.0.9.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.0.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.0.tgz)
 
 ## More information
 
@@ -69,10 +69,12 @@ npm run build
     * [.vowels](#module_calCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
     * [.diacriticsByName](#module_calCodeUtil.diacriticsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.diacritics](#module_calCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.punctuation](#module_calCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
     * [.dotting](#module_calCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_calCodeUtil.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_calCodeUtil.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_calCodeUtil.isDiacritic) ⇒ <code>boolean</code>
+    * [.isPunctuation](#module_calCodeUtil.isPunctuation) ⇒ <code>boolean</code>
     * [.isDotting](#module_calCodeUtil.isDotting) ⇒ <code>boolean</code>
     * [.isDotted](#module_calCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
@@ -133,6 +135,12 @@ Sedra/CAL diacritic characters:
 4. __*__ Seyame
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.punctuation"></a>
+
+### calCodeUtil.punctuation : <code>Array.&lt;string&gt;</code>
+Common punctuation
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.dotting"></a>
 
 ### calCodeUtil.dotting : <code>Array.&lt;string&gt;</code>
@@ -167,6 +175,18 @@ Is character c a CAL vowel
 
 ### calCodeUtil.isDiacritic ⇒ <code>boolean</code>
 Is character c a diacritic? Same characters used for both Sedra 3 and CAL.
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+**Returns**: <code>boolean</code> - true if c is a diacritic  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
+
+<a name="module_calCodeUtil.isPunctuation"></a>
+
+### calCodeUtil.isPunctuation ⇒ <code>boolean</code>
+Is character c a common punctuation char? Same characters used for both Sedra 3 and CAL.
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a diacritic  

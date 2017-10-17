@@ -142,3 +142,14 @@ describe('isDotted', () => {
     test.strictEqual(vocalised, true, 'isDotted vocalised');
   });
 });
+describe('Punctuation', () => {
+  const { isPunctuation } = sut;
+  it('isPunctuation', () => {
+    test.strictEqual(isPunctuation(''), false, 'empty');
+    test.strictEqual(isPunctuation(','), false, 'comma highjacked for diacritics');
+    test.strictEqual(isPunctuation('.'), true, 'point - end of sentence');
+    test.strictEqual(isPunctuation('?'), true, 'question mark');
+    test.strictEqual(isPunctuation('!'), true, 'exclamation mark');
+    test.strictEqual(isPunctuation(';'), true, 'semicolon');
+  });
+});
