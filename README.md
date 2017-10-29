@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.1.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.1.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.2.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.2.tgz)
 
 ## More information
 
@@ -61,9 +61,11 @@ npm run build
 ## API Reference
 
 * [calCodeUtil](#module_calCodeUtil)
+    * [.consonantsByName](#module_calCodeUtil.consonantsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.consonants](#module_calCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
     * [.extraConsonants](#module_calCodeUtil.extraConsonants) : <code>Array.&lt;string&gt;</code>
     * [.allConsonants](#module_calCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.vowelsByName](#module_calCodeUtil.vowelsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.commonVowels](#module_calCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternVowels](#module_calCodeUtil.easternVowels) : <code>Array.&lt;string&gt;</code>
     * [.vowels](#module_calCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
@@ -79,6 +81,12 @@ npm run build
     * [.isDotted](#module_calCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
 
+<a name="module_calCodeUtil.consonantsByName"></a>
+
+### calCodeUtil.consonantsByName : <code>Object.&lt;string, string&gt;</code>
+CAL consonant name to value map
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.consonants"></a>
 
 ### calCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
@@ -95,6 +103,12 @@ Extra CAL consonants specific to Palestinian or Hebrew
 
 ### calCodeUtil.allConsonants : <code>Array.&lt;string&gt;</code>
 Base consonants + extra consonants
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.vowelsByName"></a>
+
+### calCodeUtil.vowelsByName : <code>Object.&lt;string, string&gt;</code>
+CAL vowel name to value map
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.commonVowels"></a>

@@ -1,4 +1,47 @@
 /** @module calCodeUtil */
+import { hasDotting, clearDotting } from 'aramaic-mapper';
+
+/**
+ * CAL consonant name to value map
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const consonantsByName = Object.freeze(
+  Object.create(null, {
+    alaph: { value: ')', enumerable: true },
+    beth: { value: 'b', enumerable: true },
+    gamal: { value: 'g', enumerable: true },
+    dalath: { value: 'd', enumerable: true },
+
+    he: { value: 'h', enumerable: true },
+    waw: { value: 'w', enumerable: true },
+    zayn: { value: 'z', enumerable: true },
+
+    heth: { value: 'x', enumerable: true },
+    teth: { value: 'T', enumerable: true },
+    yod: { value: 'y', enumerable: true },
+
+    kaph: { value: 'k', enumerable: true },
+    lamadh: { value: 'l', enumerable: true },
+    mim: { value: 'm', enumerable: true },
+    nun: { value: 'n', enumerable: true },
+
+    semkath: { value: 's', enumerable: true },
+    e: { value: '(', enumerable: true },
+    pe: { value: 'p', enumerable: true },
+    sadhe: { value: 'c', enumerable: true },
+
+    qoph: { value: 'q', enumerable: true },
+    resh: { value: 'r', enumerable: true },
+    shin: { value: '$', enumerable: true },
+    taw: { value: 't', enumerable: true },
+
+    peReversed: { value: 'P', enumerable: true },
+    sin: { value: '&', enumerable: true }
+  })
+);
+
+const l = consonantsByName;
 /**
  * CAL consonants
  * @constant
@@ -6,38 +49,38 @@
 */
 export const consonants = Object.freeze([
   // abgad
-  ')',
-  'b',
-  'g',
-  'd',
+  l.alaph,
+  l.beth,
+  l.gamal,
+  l.dalath,
 
   // hawaz
-  'h',
-  'w',
-  'z',
+  l.he,
+  l.waw,
+  l.zayn,
 
   // ḥaṭy
-  'x',
-  'T',
-  'y',
+  l.heth,
+  l.teth,
+  l.yod,
 
   // kalman
-  'k',
-  'l',
-  'm',
-  'n',
+  l.kaph,
+  l.lamadh,
+  l.mim,
+  l.nun,
 
   // saʿpac
-  's',
-  '(',
-  'p',
-  'c',
+  l.semkath,
+  l.e,
+  l.pe,
+  l.sadhe,
 
   // qarshat
-  'q',
-  'r',
-  '$',
-  't'
+  l.qoph,
+  l.resh,
+  l.shin,
+  l.taw
 ]);
 
 /**
@@ -46,8 +89,8 @@ export const consonants = Object.freeze([
  * @type { string[] }
  */
 export const extraConsonants = [
-  'P', // Palestinian Syriac P
-  '&' // Hebrew Sin
+  l.peReversed, // Palestinian Syriac P
+  l.sin // Hebrew Sin
 ];
 
 /**
@@ -58,18 +101,43 @@ export const extraConsonants = [
 export const allConsonants = Object.freeze(consonants.concat(extraConsonants));
 
 /**
+ * CAL vowel name to value map
+ * @constant
+ * @type { Object.<string, string> }
+*/
+export const vowelsByName = Object.freeze(
+  Object.create(null, {
+    pthaha: { value: 'a', enumerable: true },
+    zqapha: { value: 'o', enumerable: true },
+    rbasa: { value: 'e', enumerable: true },
+    hbasa: { value: 'i', enumerable: true },
+    esasa: { value: 'u', enumerable: true },
+
+    zlama: { value: 'E', enumerable: true },
+    rwaha: { value: 'O', enumerable: true }
+  })
+);
+
+const v = vowelsByName;
+/**
  * CAL common vowels
  * @constant
  * @type { string[] }
 */
-export const commonVowels = Object.freeze(['a', 'o', 'e', 'i', 'u']);
+export const commonVowels = Object.freeze([
+  v.pthaha,
+  v.zqapha,
+  v.rbasa,
+  v.hbasa,
+  v.esasa
+]);
 
 /**
  * CAL eastern/hebrew only vowels
  * @constant
  * @type { string[] }
 */
-export const easternVowels = Object.freeze(['E', 'O']);
+export const easternVowels = Object.freeze([v.zlama, v.rwaha]);
 
 /**
  * CAL vowels including Eastern/Hebrew ones
@@ -96,6 +164,7 @@ export const diacriticsByName = Object.freeze(
   })
 );
 
+const d = diacriticsByName;
 /**
  * Sedra/CAL diacritic characters:
  * 1. __'__ dot above, Qushaya
@@ -105,7 +174,12 @@ export const diacriticsByName = Object.freeze(
  * @constant
  * @type { string[] }
 */
-export const diacritics = Object.freeze(["'", ',', '_', '*']);
+export const diacritics = Object.freeze([
+  d.qushaya,
+  d.rukkakha,
+  d.lineaOccultans,
+  d.seyame
+]);
 
 /**
  * Common punctuation
@@ -161,38 +235,11 @@ export const isDotting = c => dotting.indexOf(c) > -1;
  * @param { string } word input CAL code word
  * @returns { boolean } true if word has vowels or diacritics
  */
-export const isDotted = word => {
-  if (!word) {
-    return false;
-  }
-  for (let i = 0, len = word.length; i < len; i++) {
-    const c = word.charAt(i);
-    if (isDotting(c)) {
-      return true;
-    }
-  }
-  return false;
-};
+export const isDotted = hasDotting(isDotting);
 
 /**
  * Remove dotting (vowels and diacritics), leaving consonantal word only.
  * @param { string } word input word to be processed
  * @returns { string } consonantal word
  */
-export const removeDotting = word => {
-  if (!word) {
-    return word;
-  }
-
-  let hasDotting = false;
-  const stack = [];
-  for (let i = 0, len = word.length; i < len; i++) {
-    const c = word.charAt(i);
-    if (isDotting(c)) {
-      hasDotting = true;
-    } else {
-      stack.push(c);
-    }
-  }
-  return hasDotting ? stack.join('') : word;
-};
+export const removeDotting = clearDotting(isDotting);
