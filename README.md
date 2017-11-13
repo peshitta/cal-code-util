@@ -5,8 +5,8 @@
 [![Build Status](https://travis-ci.org/peshitta/cal-code-util.svg?branch=master)](https://travis-ci.org/peshitta/cal-code-util)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/peshitta/cal-code-util/blob/master/LICENSE)
 [![Dependency Status](https://david-dm.org/peshitta/cal-code-util.svg)](https://david-dm.org/peshitta/cal-code-util)
-[![devDependencies Status](https://david-dm.org/peshitta/cal-code-util/dev-status.svg)](https://david-dm.org/peshitta/cal-code-util?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/peshitta/cal-code-util/badge.svg?branch=master)](https://coveralls.io/github/peshitta/cal-code-util?branch=master)
+[![Gitter](https://badges.gitter.im/peshitta/peshitta.svg "Join the chat at https://gitter.im/peshitta/Lobby")](https://gitter.im/peshitta/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Aramaic CAL code transliteration utilities
 
@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.2.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.2.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.3.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.3.tgz)
 
 ## More information
 
@@ -47,7 +47,11 @@ You are welcomed to improve this implementation or provide feedback. Please
 feel free to [Fork](https://help.github.com/articles/fork-a-repo/), create a
 [Pull Request](https://help.github.com/articles/about-pull-requests/) or
 submit [Issues](https://github.com/peshitta/cal-code-util/issues).
-Thank you!
+
+To read quick updates about the app or post questions or feedback, follow
+[@peshittap](https://www.twitter.com/peshittap)
+at [![@peshittap](http://i.imgur.com/wWzX9uB.png "@peshittap")](https://www.twitter.com/peshittap)or
+[![Gitter](https://badges.gitter.im/peshitta/peshitta.svg "Join the chat at https://gitter.im/peshitta/Lobby")](https://gitter.im/peshitta/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Development
 
@@ -71,6 +75,7 @@ npm run build
     * [.vowels](#module_calCodeUtil.vowels) : <code>Array.&lt;string&gt;</code>
     * [.diacriticsByName](#module_calCodeUtil.diacriticsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.diacritics](#module_calCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.letterAsciiMap](#module_calCodeUtil.letterAsciiMap) : <code>Object.&lt;string, string&gt;</code>
     * [.punctuation](#module_calCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
     * [.dotting](#module_calCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_calCodeUtil.isConsonant) ⇒ <code>boolean</code>
@@ -80,6 +85,7 @@ npm run build
     * [.isDotting](#module_calCodeUtil.isDotting) ⇒ <code>boolean</code>
     * [.isDotted](#module_calCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
+    * [.sort](#module_calCodeUtil.sort) ⇒ <code>number</code>
 
 <a name="module_calCodeUtil.consonantsByName"></a>
 
@@ -147,6 +153,14 @@ Sedra/CAL diacritic characters:
 2. __,__ dot below, Rukkakha
 3. **_** line under
 4. __*__ Seyame
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.letterAsciiMap"></a>
+
+### calCodeUtil.letterAsciiMap : <code>Object.&lt;string, string&gt;</code>
+CAL to ordinal ASCII value. Used for sorting:
+a b c d e f g h i j k l m n o p q r s t u v
+w x y z { | }
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.punctuation"></a>
@@ -244,4 +258,17 @@ Remove dotting (vowels and diacritics), leaving consonantal word only.
 | Param | Type | Description |
 | --- | --- | --- |
 | word | <code>string</code> | input word to be processed |
+
+<a name="module_calCodeUtil.sort"></a>
+
+### calCodeUtil.sort ⇒ <code>number</code>
+Comparator function to be used for sorting CAL words
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+**Returns**: <code>number</code> - -1, 0, 1 depending on word sorting  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word1 | <code>string</code> | first word to compare |
+| word2 | <code>string</code> | second word to compare |
 
