@@ -146,10 +146,27 @@ describe('Punctuation', () => {
   const { isPunctuation } = sut;
   it('isPunctuation', () => {
     test.strictEqual(isPunctuation(''), false, 'empty');
-    test.strictEqual(isPunctuation(','), false, 'comma highjacked for diacritics');
+    test.strictEqual(
+      isPunctuation(','),
+      false,
+      'comma highjacked for diacritics'
+    );
     test.strictEqual(isPunctuation('.'), true, 'point - end of sentence');
     test.strictEqual(isPunctuation('?'), true, 'question mark');
     test.strictEqual(isPunctuation('!'), true, 'exclamation mark');
     test.strictEqual(isPunctuation(';'), true, 'semicolon');
+  });
+});
+describe('isBdwlPrefix', () => {
+  const { isBdwlPrefix } = sut;
+  it('Consonantal and vocalised isBdwlPrefix', () => {
+    let word = ')b)';
+    let check = isBdwlPrefix(word, 0);
+    test.strictEqual(check, false, 'zero index non');
+    check = isBdwlPrefix(word, 2);
+    test.strictEqual(check, false, 'two index non');
+    word = "d'la)b,o)";
+    check = isBdwlPrefix(word, 2);
+    test.strictEqual(check, true, 'two index set');
   });
 });

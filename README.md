@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.4.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.4.tgz)
+[https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.5.tgz](https://registry.npmjs.org/cal-code-util/-/cal-code-util-1.1.5.tgz)
 
 ## More information
 
@@ -78,6 +78,7 @@ npm run build
     * [.letterAsciiMap](#module_calCodeUtil.letterAsciiMap) : <code>Object.&lt;string, string&gt;</code>
     * [.punctuation](#module_calCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
     * [.dotting](#module_calCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
+    * [.bdwl](#module_calCodeUtil.bdwl) : <code>Array.&lt;string&gt;</code>
     * [.isConsonant](#module_calCodeUtil.isConsonant) ⇒ <code>boolean</code>
     * [.isVowel](#module_calCodeUtil.isVowel) ⇒ <code>boolean</code>
     * [.isDiacritic](#module_calCodeUtil.isDiacritic) ⇒ <code>boolean</code>
@@ -86,6 +87,7 @@ npm run build
     * [.isDotted](#module_calCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.removeDotting](#module_calCodeUtil.removeDotting) ⇒ <code>string</code>
     * [.sort](#module_calCodeUtil.sort) ⇒ <code>number</code>
+    * [.isBdwlPrefix](#module_calCodeUtil.isBdwlPrefix) ⇒ <code>boolean</code>
 
 <a name="module_calCodeUtil.consonantsByName"></a>
 
@@ -173,6 +175,12 @@ Common punctuation
 
 ### calCodeUtil.dotting : <code>Array.&lt;string&gt;</code>
 Vowels and diacritics: used for consonantal only mapping
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+<a name="module_calCodeUtil.bdwl"></a>
+
+### calCodeUtil.bdwl : <code>Array.&lt;string&gt;</code>
+Bdwl consonants
 
 **Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
 <a name="module_calCodeUtil.isConsonant"></a>
@@ -271,4 +279,17 @@ Comparator function to be used for sorting CAL words
 | --- | --- | --- |
 | word1 | <code>string</code> | first word to compare |
 | word2 | <code>string</code> | second word to compare |
+
+<a name="module_calCodeUtil.isBdwlPrefix"></a>
+
+### calCodeUtil.isBdwlPrefix ⇒ <code>boolean</code>
+Return true if word is bdwl prefixed starting with index
+
+**Kind**: static constant of [<code>calCodeUtil</code>](#module_calCodeUtil)  
+**Returns**: <code>boolean</code> - true if word is bdwl prefixed  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | word to test |
+| index | <code>number</code> | position in word to start checking from |
 

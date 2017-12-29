@@ -5,7 +5,7 @@ import { hasDotting, clearDotting, getSort } from 'aramaic-mapper';
  * CAL consonant name to value map
  * @constant
  * @type { Object.<string, string> }
-*/
+ */
 export const consonantsByName = Object.freeze(
   Object.create(null, {
     alaph: { value: ')', enumerable: true },
@@ -46,7 +46,7 @@ const l = consonantsByName;
  * CAL consonants
  * @constant
  * @type { string[] }
-*/
+ */
 export const consonants = Object.freeze([
   // abgad
   l.alaph,
@@ -104,7 +104,7 @@ export const allConsonants = Object.freeze(consonants.concat(extraConsonants));
  * CAL vowel name to value map
  * @constant
  * @type { Object.<string, string> }
-*/
+ */
 export const vowelsByName = Object.freeze(
   Object.create(null, {
     pthaha: { value: 'a', enumerable: true },
@@ -123,7 +123,7 @@ const v = vowelsByName;
  * CAL common vowels
  * @constant
  * @type { string[] }
-*/
+ */
 export const commonVowels = Object.freeze([
   v.pthaha,
   v.zqapha,
@@ -136,14 +136,14 @@ export const commonVowels = Object.freeze([
  * CAL eastern/hebrew only vowels
  * @constant
  * @type { string[] }
-*/
+ */
 export const easternVowels = Object.freeze([v.zlama, v.rwaha]);
 
 /**
  * CAL vowels including Eastern/Hebrew ones
  * @constant
  * @type { string[] }
-*/
+ */
 export const vowels = Object.freeze(commonVowels.concat(easternVowels));
 
 /**
@@ -154,7 +154,7 @@ export const vowels = Object.freeze(commonVowels.concat(easternVowels));
  * 4. seyame: __*__ - seyame, rebwe
  * @constant
  * @type { Object.<string, string> }
-*/
+ */
 export const diacriticsByName = Object.freeze(
   Object.create(null, {
     qushaya: { value: "'", enumerable: true },
@@ -173,7 +173,7 @@ const d = diacriticsByName;
  * 4. __*__ Seyame
  * @constant
  * @type { string[] }
-*/
+ */
 export const diacritics = Object.freeze([
   d.qushaya,
   d.rukkakha,
@@ -187,7 +187,7 @@ export const diacritics = Object.freeze([
  * w x y z { | }
  * @constant
  * @type { Object.<string, string> }
-*/
+ */
 export const letterAsciiMap = Object.freeze(
   Object.create(null, {
     [l.alaph]: { value: 'a', enumerable: true },
@@ -251,6 +251,18 @@ export const punctuation = Object.freeze([';', '?', '!', '.', '-', ':']);
 export const dotting = Object.freeze(vowels.concat(diacritics));
 
 /**
+ * Bdwl consonants
+ * @constant
+ * @type { Array.<string> }
+ */
+export const bdwl = Object.freeze([
+  consonantsByName.beth,
+  consonantsByName.dalath,
+  consonantsByName.waw,
+  consonantsByName.lamadh
+]);
+
+/**
  * Is character c a CAL consonant
  * @param { string } c input character
  * @returns { boolean } true if c is CAL consonant
@@ -307,3 +319,23 @@ export const removeDotting = clearDotting(isDotting);
  * @returns { number } -1, 0, 1 depending on word sorting
  */
 export const sort = getSort(letterAsciiMap, removeDotting);
+
+/**
+ * Return true if word is bdwl prefixed starting with index
+ * @static
+ * @param { string } word word to test
+ * @param { number } index position in word to start checking from
+ * @returns { boolean } true if word is bdwl prefixed
+ */
+export const isBdwlPrefix = (word, index) => {
+  if (index <= 0) {
+    return false;
+  }
+  for (let i = index; i >= 0; i--) {
+    const c = word.charAt(i);
+    if (isConsonant(c) && bdwl.indexOf(c) === -1) {
+      return false;
+    }
+  }
+  return true;
+};
