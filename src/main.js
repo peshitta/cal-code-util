@@ -328,7 +328,7 @@ export const sort = getSort(letterAsciiMap, removeDotting);
  * @returns { boolean } true if word is bdwl prefixed
  */
 export const isBdwlPrefix = (word, index) => {
-  if (index <= 0) {
+  if (index < 0) {
     return false;
   }
   for (let i = index; i >= 0; i--) {

@@ -161,8 +161,8 @@ describe('isBdwlPrefix', () => {
   const { isBdwlPrefix } = sut;
   it('Consonantal and vocalised isBdwlPrefix', () => {
     let word = ')b)';
-    let check = isBdwlPrefix(word, 0);
-    test.strictEqual(check, false, 'zero index non');
+    let check = isBdwlPrefix(word, -1);
+    test.strictEqual(check, false, 'less than zero index non');
     check = isBdwlPrefix(word, 2);
     test.strictEqual(check, false, 'two index non');
     word = "d'la)b,o)";
