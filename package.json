@@ -1,6 +1,6 @@
 {
   "name": "cal-code-util",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Aramaic CAL code transliteration utilities",
   "main": "build/cal-code-util.js",
   "mainMin": "build/cal-code-util.min.js",
@@ -60,17 +60,17 @@
   },
   "homepage": "https://github.com/peshitta/cal-code-util#readme",
   "dependencies": {
-    "aramaic-mapper": "^1.1.4"
+    "aramaic-mapper": "^1.1.5"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "eslint": "^4.14.0",
+    "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
-    "jsdoc-to-markdown": "^3.0.3",
+    "jsdoc-to-markdown": "^3.0.4",
     "mocha": "^4.1.0",
-    "rollup": "^0.53.1",
+    "rollup": "^0.54.0",
     "rollup-plugin-buble": "^0.18.0",
     "rollup-plugin-istanbul": "^2.0.0",
     "rollup-plugin-uglify": "^2.0.1"
